@@ -1,0 +1,514 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+:root {
+  --primaryTextColor: #232e35; /* Untuk title atau judul */
+  --secondaryTextColor: #656d72; /* Untuk text biasa seperti paragraph contohnya */
+
+  --borderColor: #f1f1f1;
+  --lineColor: #d9d9d9; /* untuk line di pre-title */
+
+  --primaryBackgroundColor: #fff;
+  --secondaryBackgroundColor: #fbfbfb;
+  --thirdBackgroundColor: #f5f3fe;
+
+  --primaryIconColor: #000000;
+  --primaryIconColorHover: #000000;
+
+  --sectionPadding: 6rem 0;
+
+  --itemBorderRadius: 0.7rem;
+}
+
+/* Home.css */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  color: var(--primaryTextColor);
+}
+
+p {
+  font-size: 1rem; /* 16 px */
+  line-height: 1.9rem; /*30.4 px */
+}
+
+p,
+span,
+label,
+input,
+textarea,
+li {
+  color: var(--secondaryTextColor);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* End Preparation */
+
+.main-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .main-container {
+    width: 90%;
+  }
+}
+
+/* Buttons */
+.btn {
+  padding: 1rem 1.5rem;
+  background: white;
+  border: 1.5px solid var(--borderColor);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+/* Titles */
+.section-title {
+  margin: 1rem 0 4rem;
+  font-size: 2rem;
+}
+
+.pre-title {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: var(--secondaryTextColor);
+  position: relative;
+  padding-left: 40px;
+  width: fit-content;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.pre-title::before {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background: var(--lineColor);
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 50%;
+}
+
+/* Layouts */
+.grid-3 {
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr; use this first, use code below when its time for explaining responsive design part */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+}
+
+/* --- Logo and Navigation Menu --- */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+
+/* Logo */
+.logo {
+  font-style:oblique;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.logo a {
+  color: var(--primaryTextColor);
+}
+
+/* Navigation Menu */
+nav ul li {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li a {
+  color: var(--primaryTextColor);
+}
+.nav ul li a:hover{
+  border-bottom: 1px solid #000;
+   
+
+}
+
+/* Burger - Save for later on video */
+.burger div {
+  width: 25px;
+  height: 2px;
+  background-color: #000;
+  margin: 7px;
+  transition: all 0.3s;
+  z-index: 99;
+}
+
+.burger {
+  display: none;
+  z-index: 99;
+  position: fixed;
+  top: 33px;
+  right: 35px;
+}
+
+/* Hero Section */
+#hero {
+  height: 720px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* We're not going to use automatic template columns, because we need to know when the columns is go below. So we can exchange the order of the element */
+  align-items: center;
+}
+
+.hero-name {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0.5rem 0 1rem;
+}
+
+.hero-name span {
+  color: var(--primaryIconColor) !important;
+}
+
+.aboutme-right img {
+  width: 100%;
+  margin-left: 50px;
+}
+
+.aboutme-right {
+  display: flex;
+  justify-content: center;
+  margin-left: 5rem;
+  filter: grayscale(100%) opacity(30);
+  cursor: pointer;
+  transition: 1s;
+}
+.aboutme-right:hover{
+    scale: 1.1;
+    filter: grayscale(0%) opacity(100);
+}
+/* Primary Button (Selengkapnya) */
+.btn-primary {
+    margin-top: 15px;
+    background-color: #ffffff; /* Blue */
+    color: rgb(0, 0, 0);
+    border: solid 1px #000;
+    border-radius: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  .btn-primaryy:hover{
+    scale: 1.1;
+    transition: 1s;
+    background-color: white;
+    color: #000;
+    border: solid 1px #000;
+  }
+  .btn-primaryy {
+    margin-top: -50px;
+    background-color: #000000; /* Blue */
+    color: rgb(255, 255, 255);
+    border: solid 1px #000;
+    border-radius: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+ 
+  .btn-primary:hover{
+    scale: 1.1;
+    transition: 1s;
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    border: solid 1px #000;
+  }
+  
+
+
+/* Contact Section */
+#contact {
+  padding: var(--sectionPadding);
+}
+
+.contact {
+  display: grid;
+  /* grid-template-columns: 1fr 1fr; */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+}
+
+.contact-form div {
+  margin-bottom: 1.4rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem 1.3rem;
+  font-family: "Roboto", sans-serif;
+  background: black;
+  border: 1px solid var(--borderColor);
+  border-radius: 3px;
+  resize: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #9d9fa1;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border: 1px solid #7d7d7d;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 0.75rem 1.3rem;
+  background-color: var(--primaryIconColor);
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.btn-submit:hover {
+  background-color: var(--primaryIconColorHover);
+}
+
+/* Contact Section - Right Side */
+.contact-item {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.contact-item-icon {
+  background: var(--thirdBackgroundColor);
+  /* padding: 0.8rem 1rem; */
+  width: 53px;
+  height: 53px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-item-icon svg {
+  fill: var(--primaryIconColor);
+}
+
+.contact-item-detail h4 {
+  margin-bottom: 0.6rem;
+}
+
+/* Footer Section */
+footer {
+  height: 1vw;
+  padding: 4rem 0;
+  background: var(--secondaryBackgroundColor);
+  text-align: end;
+}
+
+.footer-icons {
+  margin-bottom: 1rem;
+}
+
+.footer-icons a {
+  margin: 0 0.5rem;
+}
+
+.footer-icons svg {
+  fill: #3e3f40;
+}
+
+.footer-icons a:hover svg {
+  fill: #000;
+}
+@media screen and (max-width: 1000px) {
+    p {
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+  
+    .grid-3 {
+      gap: 1rem;
+    }
+  
+    .skills-right ul li {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media screen and (max-width: 825px) {
+    /* Burger */
+    .burger {
+      display: block;
+      cursor: pointer;
+    }
+  
+    .toggle-burger .line-1 {
+      transform: rotate(-45deg) translate(-5px, 7px);
+    }
+  
+    .toggle-burger .line-2 {
+      opacity: 0;
+    }
+  
+    .toggle-burger .line-3 {
+      transform: rotate(45deg) translate(-5px, -7px);
+    }
+  
+    /* Navigation */
+    nav {
+      position: fixed;
+      width: 50%;
+      right: 0;
+      top: 0;
+      height: 100vh;
+      flex-direction: column;
+      background: var(--primaryBackgroundColor);
+      border-left: 1px solid var(--borderColor);
+      z-index: 9;
+      transform: translateX(100%);
+      transition: 0.2s ease-in-out;
+    }
+  
+    nav ul {
+      height: 100vh;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    .nav-active {
+      transform: translateX(0);
+    }
+    /* End of Navigation */
+  
+    :root {
+      --sectionPadding: 4rem 0;
+    }
+  
+    /* Titles */
+    .section-title {
+      font-size: 1.6rem;
+      margin: 0.6rem 0 2.5rem;
+    }
+  
+    .pre-title {
+      font-size: 0.8rem;
+    }
+  
+    /* Hero Section */
+    #hero {
+      grid-template-columns: 1fr;
+      height: fit-content;
+    }
+  
+    .aboutme-right {
+      order: -1;
+    }
+  
+    .aboutme-right img {
+      margin-left: 10px;
+      margin-top: 20px;
+      margin-bottom: 100px;
+      max-width: 400px;
+    }
+  
+    .hero-left {
+      text-align: center;
+      padding-bottom: 5rem;
+    }
+  
+    .hero-left .pre-title {
+      margin: 0 auto;
+    }
+  
+    .hero-name {
+      font-size: 2.3rem;
+      margin-bottom: 0.5rem;
+    }
+  
+    /* Skills Section */
+    .skills-grid {
+      gap: 1rem;
+    }
+  
+    /* Footer */
+    footer {
+      padding: 2rem 0;
+    }
+  }
+  
+  /* Mobile Size */
+  @media screen and (max-width: 640px) {
+    /* Titles */
+    
+    .section-title {
+      font-size: 1.3rem;
+    }
+  
+    .pre-title {
+      font-size: 0.7rem;
+    }
+    .aboutme-right img {
+      margin-top: 90px;
+      width: 80%;
+      margin-left: -60px;
+      margin-bottom: 30px;
+    }
+  }
