@@ -56,7 +56,7 @@ function Home() {
                     </div>
 
                     <div className="aboutsme-right fade-in">
-                        <img src="../images/section.png" alt="Person Standing" />
+                        <img src="../images/ssection.png" alt="Person Standing" />
                     </div>
                 </section>
             </div>
