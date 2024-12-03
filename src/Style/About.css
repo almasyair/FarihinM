@@ -233,7 +233,6 @@ nav ul li a {
 
 /* Services Section */
 #services {
-  background-color: var(--secondaryBackgroundColor);
   padding: var(--sectionPadding);
 }
 
@@ -248,7 +247,7 @@ nav ul li a {
 .service {
   padding: 3rem 2rem;
   text-align: center;
-  background: var(--primaryBackgroundColor);
+  background: rgba(128, 128, 128, 0.123);
   border-radius: var(--itemBorderRadius);
 }
 
@@ -259,28 +258,18 @@ nav ul li a {
 }
 
 .service-icon {
-  background: var(--thirdBackgroundColor);
   width: fit-content;
   margin: 0 auto;
   padding: 1rem 1.3rem;
   border-radius: 0.5rem;
 }
 
-.service-icon svg {
-  fill: var(--primaryIconColor);
+.service-icon img{
+  width: 20%;
+  height: auto;
+
 }
 
-.service-icon {
-  background: var(--thirdBackgroundColor);
-  width: fit-content;
-  margin: 0 auto;
-  padding: 1rem 1.3rem;
-  border-radius: 0.5rem;
-}
-
-.service-icon svg {
-  fill: var(--primaryIconColor);
-}
 
 /* Portfolios */
 #portfolios {
