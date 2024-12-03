@@ -187,7 +187,7 @@ function Home() {
               </div>
               <div className="portfolio-info">
                 <div className="portfolio-title">
-                  <h4>tampilan Gojek</h4>
+                  <h4>Tampilan Gojek</h4>
                   <a href="/" className="portfolio-link">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -243,7 +243,7 @@ function Home() {
             <div className="portfolio">
               <div className="portfolio-cover">
                 <img
-                  src="../images/projek1.png"
+                  src="../images/projek3.png"
                   alt="Portfolio 1"
                 />
               </div>
