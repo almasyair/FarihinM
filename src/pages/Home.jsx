@@ -264,8 +264,7 @@ function Home() {
                   </a>
                 </div>
                 <div className="portfolio-tags">
-                  <div>Vue</div>
-                  <div>Contentful</div>
+                  <div>Figma</div>
                 </div>
                 <p>
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia
