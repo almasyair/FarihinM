@@ -1,5 +1,6 @@
 import React from 'react';
-import '../Style/Home.css'; // Correct path
+import '../Style/Home.css';
+import '../Style/About.css'; // Correct path
 function Home() {
     const navSlide = () => {
         const burger = document.querySelector(".burger");
@@ -19,10 +20,10 @@ function Home() {
                     </div>
                     <nav>
                         <ul>
-                            <li><a onClick={() => window.location.href = '/about'} href="#/about">Services</a></li>
-                            <li><a onClick={() => window.location.href = '/about'} href="#/about">Portfolio</a></li>
-                            <li><a onClick={() => window.location.href = '/about'} href="#/about">Skills</a></li>
-                            <li><a href="#contact">Contact</a></li>
+                        <li><a href="#aboutsme">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
                             <li>
                                 <a href="/resume.pdf" target="_blank">
                                     <button className="btn">Resume</button>
@@ -30,12 +31,6 @@ function Home() {
                             </li>
                         </ul>
                     </nav>
-
-                    <div  className="burger">
-                        <div className="line-1"></div>
-                        <div className="line-2"></div>
-                        <div className="line-3"></div>
-                    </div>
                 </div>
                 <section id="hero">
                     <div className="hero-left fade-in">
@@ -43,16 +38,245 @@ function Home() {
                         <h1 className="hero-name">UI/UX Designer | Web Development</h1>
                         <p>Saya merupakan seorang UI/UX designer pemula dan web devoleper dengan bahasa pemograman dan tools yang masi dasar, saya sangat menyukai javaScript dan Mysql.
                         </p>
-                        <button className="btn-primary" onClick={() => window.location.href = '/about'}>Selengkapnya</button>
+                        <button className="btn-primary" onClick={() => window.location.href = '#skills'}>Selengkapnya</button>
                         <button className="btn-primaryy" onClick={() => window.location.href = '/#contact'}>Contact</button>
                     </div>
                     <div className="aboutme-right fade-in">
                         <img src="../images/logo.png" alt="Person Standing" />
                     </div>
-
                 </section>
+                <section id="aboutsme">
+                    <div className="aboutsme-left fade-in">
+                        <h1 className="hero-name">About me</h1>
+                        <h3 className="pre-title ">Muhammad Farihin Mushawwir</h3>
+                        <p>Saya merupakan seorang UI/UX Designer pemula dan Web Devoleper dengan bahasa pemograman dan tools yang masi dasar, saya sangat menyukai JavaScript, HTML, CSS.                           </p>
+                        <a href="https://drive.google.com/file/d/1BEbPpXrfddn3x8_QUPRID4jk2onLESXX/view?usp=sharing" class="btn-secondary" target="_blank" rel="noopener noreferrer">
+                            <button class="btn-secondary-button">Download CV</button>
+                        </a>
+                    </div>
 
+                    <div className="aboutsme-right fade-in">
+                        <img src="../images/section.png" alt="Person Standing" />
+                    </div>
+                </section>
             </div>
+            <section id="skills">
+                <div class="skills main-container fade-in">
+                    <h3 classn="pre-title">Learning Path</h3>
+                    <h1 className="section-title">Skills & Education</h1>
+
+                    <div className="skills-grid">
+                        <div className="skills-left">
+                            <div className="education">
+                                <div className="line">
+                                    <div></div>
+                                </div>
+                                <div className="education-info">
+                                    <h4 className="education-title">Universitas Muslim Indonesia</h4>
+                                    <p>Teknik Informatika</p>
+                                    <h4 className="education-years">2023</h4>
+                                </div>
+                            </div>
+                            <div className="education">
+                                <div className="line">
+                                    <div></div>
+                                </div>
+                                <div className="education-info">
+                                    <h4 className="education-title">MA Arifah</h4>
+                                    <p>MIPA</p>
+                                    <h4 className="education-years">2022</h4>
+                                </div>
+                            </div>
+                            <div className="education">
+                                <div className="line">
+                                    <div></div>
+                                </div>
+                                <div className="education-info">
+                                    <h4 className="education-title">SMPN 1 Sungguminasa</h4>
+                                    <p>Pelajar</p>
+                                    <h4 className="education-years">2019</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="skills-right">
+                            <p>
+                                Selama 2 tahun ini saya mengasah skill saya dangan
+                                memanfaatkan teknologi dari bahasa pemograman
+                                hingga aplikasi visual, saya gemar mengedit
+                                video dan foto sejak saya duduk di bangku smp hingga saat ini.
+                            </p>
+
+                            <div className="skills-list">
+                                <ul>
+                                    <li>React JS</li>
+                                    <li>C++</li>
+                                    <li>MySql DB</li>
+                                    <li>HTML</li>
+                                </ul>
+
+                                <ul>
+                                    <li>CSS</li>
+                                    <li>Figma</li>
+                                    <li>Canva</li>
+                                    <li>Lightroom</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+        <section id="services">
+        <div className="services main-container fade-in">
+          <h3 className="pre-title">Services</h3>
+          <h1 className="section-title services-title">Specialized In</h1>
+
+          <div className="grid-3">
+            <div className="service">
+              <div className="service-icon">
+              <img src="../images/figma.png" alt="" />
+              </div>
+              <h4>UI/UX Design</h4>
+              <p>
+              Membuat tampilan visual dengan aplikasi figma.
+              </p>
+            </div>
+            <div className="service">
+              <div className="service-icon">
+              <img src="../images/fotography.png" alt="" />
+              </div>
+              <h4>Fotography</h4>
+              <p>
+               Menghasilkan foto dan video dengan ekspresif.
+              </p>
+            </div>
+            <div className="service">
+              <div className="service-icon">
+              <img src="../images/editing.png" alt="" />
+              </div>
+              <h4>Editing</h4>
+              <p>
+              Membuat tampilan video dan foto menggunakan color grading ataupun typografi.
+              </p>
+            </div>
+            <div className="service">
+              <div className="service-icon">
+              <img src="../images/web.png" alt="" />
+              </div>
+              <h4>Web Development</h4>
+              <p>
+                Memebuat website sederhana hingga fullstack
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="portfolios">
+        <div className="portfolios main-container fade-in">
+          <h3 className="pre-title">My Works</h3>
+          <h1 className="section-title">Featured Portfolios</h1>
+
+          <div className="grid-3">
+            <div className="portfolio">
+              <div className="portfolio-cover">
+                <img
+                  src="../images/projek1.png"
+                  alt=""
+                />
+              </div>
+              <div className="portfolio-info">
+                <div className="portfolio-title">
+                  <h4>tampilan Gojek</h4>
+                  <a href="/" className="portfolio-link">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M6 17c2.269-9.881 11-11.667 11-11.667v-3.333l7 6.637-7 6.696v-3.333s-6.17-.171-11 5zm12 .145v2.855h-16v-12h6.598c.768-.787 1.561-1.449 2.339-2h-10.937v16h20v-6.769l-2 1.914z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+                <div className="portfolio-tags">
+                  <div>Figma</div>
+                  <div>Canva</div>
+                </div>
+                <p>Saya sengaja membuat tampilan ini untuk mengasah skill saya melalui aplikasi figma yang bertujuan untuk mendesain tampilan sebelum masuk ke codingan.
+                </p>
+              </div>
+            </div>  
+            <div className="portfolio">
+              <div className="portfolio-cover">
+                <img
+                  src="../images/projek2.png"
+                  alt=""
+                />
+              </div>
+              <div className="portfolio-info">
+                <div className="portfolio-title">
+                  <h4>Portofolio Web</h4>
+                  <a href="/" className="portfolio-link">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M6 17c2.269-9.881 11-11.667 11-11.667v-3.333l7 6.637-7 6.696v-3.333s-6.17-.171-11 5zm12 .145v2.855h-16v-12h6.598c.768-.787 1.561-1.449 2.339-2h-10.937v16h20v-6.769l-2 1.914z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+                <div className="portfolio-tags">
+                  <div>React</div>
+                  <div>CSS</div>
+                </div>
+                <p>Saya sengaja membuat tampilan ini untuk mengasah skill saya di melalui codingan dengan bahasa pemograman dan framework sederhana.
+                </p>
+              </div>
+            </div>
+            <div className="portfolio">
+              <div className="portfolio-cover">
+                <img
+                  src="../images/projek1.png"
+                  alt="Portfolio 1"
+                />
+              </div>
+              <div className="portfolio-info">
+                <div className="portfolio-title">
+                  <h4>Landing Page</h4>
+                  <a href="/" className="portfolio-link">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M6 17c2.269-9.881 11-11.667 11-11.667v-3.333l7 6.637-7 6.696v-3.333s-6.17-.171-11 5zm12 .145v2.855h-16v-12h6.598c.768-.787 1.561-1.449 2.339-2h-10.937v16h20v-6.769l-2 1.914z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+                <div className="portfolio-tags">
+                  <div>Vue</div>
+                  <div>Contentful</div>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia
+                  eligendi cupiditate asperiores nam, beatae repudiandae expedita
+                  fugit, quos dicta ut unde rerum vero repellat vitae.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
             <section id="contact">
                 <div className="contact main-container">
                     <div className="contact-left">
@@ -141,6 +365,7 @@ function Home() {
                         </div>
                     </div>
                 </div>
+
             </section>
             <hr />
             <footer>
@@ -153,8 +378,8 @@ function Home() {
                 </div>
                 <p>&#169; 2024 - Made by FarihinM</p>
             </footer>
-
         </>
+
     );
 }
 
