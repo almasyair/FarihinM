@@ -166,7 +166,7 @@ function Home() {
               </div>
               <h4>Web Development</h4>
               <p>
-                Memebuat website sederhana hingga fullstack
+                Membuat website sederhana hingga website fullstack.
               </p>
             </div>
           </div>
